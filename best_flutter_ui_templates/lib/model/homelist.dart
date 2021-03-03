@@ -1,7 +1,7 @@
-import 'package:best_flutter_ui_templates/kelas3/home_kelas3.dart';
-import 'package:best_flutter_ui_templates/kelas4/home_kelas4.dart';
-import 'package:best_flutter_ui_templates/kelas5/home_kelas5.dart';
-import 'package:best_flutter_ui_templates/kelas6/home_kelas6.dart';
+import 'package:best_flutter_ui_templates/kelas3/home_screen.dart';
+import 'package:best_flutter_ui_templates/kelas4/home_screen.dart';
+import 'package:best_flutter_ui_templates/kelas5/home_screen.dart';
+import 'package:best_flutter_ui_templates/kelas6/home_screen.dart';
 import 'package:flutter/widgets.dart';
 
 class HomeList {
@@ -16,19 +16,19 @@ class HomeList {
   static List<HomeList> homeList = [
     HomeList(
       imagePath: 'assets/images/kelas3.png',
-      navigateScreen: Kelas3HomeScreen(),
+      navigateScreen: Kelas3(),
     ),
     HomeList(
       imagePath: 'assets/images/kelas4.png',
-      navigateScreen: Kelas4HomeScreen(),
+      navigateScreen: Kelas4(),
     ),
     HomeList(
       imagePath: 'assets/images/kelas5.png',
-      navigateScreen: Kelas5HomeScreen(),
+      navigateScreen: Kelas5(),
     ),
     HomeList(
       imagePath: 'assets/images/kelas6.png',
-      navigateScreen: Kelas6HomeScreen(),
+      navigateScreen: Kelas6(),
     ),
   ];
 }
