@@ -3,12 +3,12 @@ import 'package:best_flutter_ui_templates/kelas3/popular_course_list_view.dart';
 import 'package:flutter/material.dart';
 import 'design_course_app_theme.dart';
 
-class DesignCourseHomeScreen extends StatefulWidget {
+class Kelas3HomeScreen extends StatefulWidget {
   @override
   _DesignCourseHomeScreenState createState() => _DesignCourseHomeScreenState();
 }
 
-class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
+class _DesignCourseHomeScreenState extends State<Kelas3HomeScreen> {
   CategoryType categoryType = CategoryType.ui;
 
   @override
