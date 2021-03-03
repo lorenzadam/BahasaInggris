@@ -95,7 +95,7 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Web Design\nCourse',
+                              'Error',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -112,29 +112,9 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                Text(
-                                  '\$28.99',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w200,
-                                    fontSize: 22,
-                                    letterSpacing: 0.27,
-                                    color: DesignCourseAppTheme.nearlyBlue,
-                                  ),
-                                ),
                                 Container(
                                   child: Row(
                                     children: <Widget>[
-                                      Text(
-                                        '4.3',
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w200,
-                                          fontSize: 22,
-                                          letterSpacing: 0.27,
-                                          color: DesignCourseAppTheme.grey,
-                                        ),
-                                      ),
                                       Icon(
                                         Icons.star,
                                         color: DesignCourseAppTheme.nearlyBlue,
@@ -151,13 +131,13 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
                             opacity: opacity1,
                             child: Padding(
                               padding: const EdgeInsets.all(8),
-                              child: Row(
-                                children: <Widget>[
-                                  getTimeBoxUI('24', 'Classe'),
-                                  getTimeBoxUI('2hours', 'Time'),
-                                  getTimeBoxUI('24', 'Seat'),
-                                ],
-                              ),
+                              // child: Row(
+                              //   children: <Widget>[
+                              //     getTimeBoxUI('24', 'Classe'),
+                              //     getTimeBoxUI('2hours', 'Time'),
+                              //     getTimeBoxUI('24', 'Seat'),
+                              //   ],
+                              // ),
                             ),
                           ),
                           Expanded(
@@ -167,18 +147,18 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
                               child: Padding(
                                 padding: const EdgeInsets.only(
                                     left: 16, right: 16, top: 8, bottom: 8),
-                                child: Text(
-                                  'Lorem ipsum is simply dummy text of printing & typesetting industry, Lorem ipsum is simply dummy text of printing & typesetting industry.',
-                                  textAlign: TextAlign.justify,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w200,
-                                    fontSize: 14,
-                                    letterSpacing: 0.27,
-                                    color: DesignCourseAppTheme.grey,
-                                  ),
-                                  maxLines: 3,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
+                                // child: Text(
+                                //   'Lorem ipsum is simply dummy text of printing & typesetting industry, Lorem ipsum is simply dummy text of printing & typesetting industry.',
+                                //   textAlign: TextAlign.justify,
+                                //   style: TextStyle(
+                                //     fontWeight: FontWeight.w200,
+                                //     fontSize: 14,
+                                //     letterSpacing: 0.27,
+                                //     color: DesignCourseAppTheme.grey,
+                                //   ),
+                                //   maxLines: 3,
+                                //   overflow: TextOverflow.ellipsis,
+                                // ),
                               ),
                             ),
                           ),
@@ -233,18 +213,18 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
                                         ],
                                       ),
                                       child: Center(
-                                        child: Text(
-                                          'Join Course',
-                                          textAlign: TextAlign.left,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 18,
-                                            letterSpacing: 0.0,
-                                            color: DesignCourseAppTheme
-                                                .nearlyWhite,
+                                          // child: Text(
+                                          //   'Join Course',
+                                          //   textAlign: TextAlign.left,
+                                          //   style: TextStyle(
+                                          //     fontWeight: FontWeight.w600,
+                                          //     fontSize: 18,
+                                          //     letterSpacing: 0.0,
+                                          //     color: DesignCourseAppTheme
+                                          //         .nearlyWhite,
+                                          //   ),
+                                          // ),
                                           ),
-                                        ),
-                                      ),
                                     ),
                                   )
                                 ],
