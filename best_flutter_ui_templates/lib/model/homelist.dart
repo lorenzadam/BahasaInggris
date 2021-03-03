@@ -1,4 +1,7 @@
-import 'package:best_flutter_ui_templates/design_course/home_design_course.dart';
+import 'package:best_flutter_ui_templates/kelas3/home_design_course.dart';
+import 'package:best_flutter_ui_templates/kelas4/home_kelas4.dart';
+import 'package:best_flutter_ui_templates/kelas5/home_kelas5.dart';
+import 'package:best_flutter_ui_templates/kelas6/home_kelas6.dart';
 import 'package:flutter/widgets.dart';
 
 class HomeList {
@@ -12,8 +15,20 @@ class HomeList {
 
   static List<HomeList> homeList = [
     HomeList(
-      imagePath: 'assets/design_course/design_course.png',
+      imagePath: 'assets/images/kelas3.png',
       navigateScreen: DesignCourseHomeScreen(),
+    ),
+    HomeList(
+      imagePath: 'assets/images/kelas4.png',
+      navigateScreen: Kelas4HomeScreen(),
+    ),
+    HomeList(
+      imagePath: 'assets/images/kelas5.png',
+      navigateScreen: Kelas5HomeScreen(),
+    ),
+    HomeList(
+      imagePath: 'assets/images/kelas6.png',
+      navigateScreen: Kelas6HomeScreen(),
     ),
   ];
 }
