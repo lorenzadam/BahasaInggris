@@ -1,4 +1,4 @@
-// import 'package:best_flutter_ui_templates/kelas3/huruf/home.dart';
+import 'package:best_flutter_ui_templates/kelas3/huruf.dart';
 import 'package:flutter/widgets.dart';
 
 class HomeList {
@@ -13,7 +13,7 @@ class HomeList {
   static List<HomeList> homeList = [
     HomeList(
       imagePath: 'assets/images/huruf.png',
-      // navigateScreen: Kelas3HomeScreen(),
+      navigateScreen: Huruf(),
     ),
     HomeList(
       imagePath: 'assets/images/angka.png',
