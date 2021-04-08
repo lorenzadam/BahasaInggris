@@ -1,4 +1,7 @@
-import 'package:best_flutter_ui_templates/kelas3/huruf.dart';
+import 'package:best_flutter_ui_templates/kelas3/huruf/home_screen.dart';
+import 'package:best_flutter_ui_templates/kelas3/angka/home_screen.dart';
+import 'package:best_flutter_ui_templates/kelas3/kata/home_screen.dart';
+import 'package:best_flutter_ui_templates/kelas3/warna/home_screen.dart';
 import 'package:flutter/widgets.dart';
 
 class HomeList {
@@ -17,15 +20,15 @@ class HomeList {
     ),
     HomeList(
       imagePath: 'assets/images/angka.png',
-      // navigateScreen: Kelas4HomeScreen(),
+      navigateScreen: Angka(),
     ),
     HomeList(
       imagePath: 'assets/images/kata.png',
-      // navigateScreen: Kelas5HomeScreen(),
+      navigateScreen: Kata(),
     ),
     HomeList(
       imagePath: 'assets/images/warna.png',
-      // navigateScreen: Kelas6HomeScreen(),
+      navigateScreen: Warna(),
     ),
   ];
 }
