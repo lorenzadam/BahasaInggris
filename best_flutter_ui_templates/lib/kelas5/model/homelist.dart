@@ -1,4 +1,4 @@
-// import 'package:best_flutter_ui_templates/kelas3/huruf/home.dart';
+import 'package:best_flutter_ui_templates/kelas5/benda/home_screen.dart';
 import 'package:flutter/widgets.dart';
 
 class HomeList {
@@ -13,7 +13,7 @@ class HomeList {
   static List<HomeList> homeList = [
     HomeList(
       imagePath: 'assets/images/benda.png',
-      // navigateScreen: Kelas3HomeScreen(),
+      navigateScreen: Benda(),
     ),
   ];
 }
