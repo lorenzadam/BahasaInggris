@@ -13,7 +13,7 @@ class HomeList {
   static List<HomeList> homeList = [
     HomeList(
       imagePath: 'assets/images/mulaibermain.png',
-      //navigateScreen: Huruf(),
+      // navigateScreen: Kata(),
     ),
     HomeList(
       imagePath: 'assets/images/pelajari.png',

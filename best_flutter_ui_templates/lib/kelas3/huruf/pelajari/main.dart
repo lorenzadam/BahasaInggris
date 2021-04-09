@@ -197,7 +197,7 @@ class HomeState extends State<Home> {
 
   Future<void> playC() async {
     final file = new File('${(await getTemporaryDirectory()).path}/C.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetC()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -209,7 +209,7 @@ class HomeState extends State<Home> {
 
   Future<void> playD() async {
     final file = new File('${(await getTemporaryDirectory()).path}/D.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetD()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -221,7 +221,7 @@ class HomeState extends State<Home> {
 
   Future<void> playE() async {
     final file = new File('${(await getTemporaryDirectory()).path}/E.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetE()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -233,7 +233,7 @@ class HomeState extends State<Home> {
 
   Future<void> playF() async {
     final file = new File('${(await getTemporaryDirectory()).path}/F.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetF()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -245,7 +245,7 @@ class HomeState extends State<Home> {
 
   Future<void> playG() async {
     final file = new File('${(await getTemporaryDirectory()).path}/G.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetG()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -257,7 +257,7 @@ class HomeState extends State<Home> {
 
   Future<void> playH() async {
     final file = new File('${(await getTemporaryDirectory()).path}/H.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetH()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -269,7 +269,7 @@ class HomeState extends State<Home> {
 
   Future<void> playI() async {
     final file = new File('${(await getTemporaryDirectory()).path}/I.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetI()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -281,7 +281,7 @@ class HomeState extends State<Home> {
 
   Future<void> playJ() async {
     final file = new File('${(await getTemporaryDirectory()).path}/J.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetJ()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -293,7 +293,7 @@ class HomeState extends State<Home> {
 
   Future<void> playK() async {
     final file = new File('${(await getTemporaryDirectory()).path}/K.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetK()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -305,7 +305,7 @@ class HomeState extends State<Home> {
 
   Future<void> playL() async {
     final file = new File('${(await getTemporaryDirectory()).path}/L.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetL()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -317,7 +317,7 @@ class HomeState extends State<Home> {
 
   Future<void> playM() async {
     final file = new File('${(await getTemporaryDirectory()).path}/M.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetM()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -329,7 +329,7 @@ class HomeState extends State<Home> {
 
   Future<void> playN() async {
     final file = new File('${(await getTemporaryDirectory()).path}/N.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetN()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -341,7 +341,7 @@ class HomeState extends State<Home> {
 
   Future<void> playO() async {
     final file = new File('${(await getTemporaryDirectory()).path}/O.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetO()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -353,7 +353,7 @@ class HomeState extends State<Home> {
 
   Future<void> playP() async {
     final file = new File('${(await getTemporaryDirectory()).path}/P.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetP()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -365,7 +365,7 @@ class HomeState extends State<Home> {
 
   Future<void> playQ() async {
     final file = new File('${(await getTemporaryDirectory()).path}/Q.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetQ()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -377,7 +377,7 @@ class HomeState extends State<Home> {
 
   Future<void> playR() async {
     final file = new File('${(await getTemporaryDirectory()).path}/R.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetR()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -389,7 +389,7 @@ class HomeState extends State<Home> {
 
   Future<void> playS() async {
     final file = new File('${(await getTemporaryDirectory()).path}/S.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetS()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -401,7 +401,7 @@ class HomeState extends State<Home> {
 
   Future<void> playT() async {
     final file = new File('${(await getTemporaryDirectory()).path}/T.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetT()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -413,7 +413,7 @@ class HomeState extends State<Home> {
 
   Future<void> playU() async {
     final file = new File('${(await getTemporaryDirectory()).path}/U.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetU()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -425,7 +425,7 @@ class HomeState extends State<Home> {
 
   Future<void> playV() async {
     final file = new File('${(await getTemporaryDirectory()).path}/V.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetV()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -437,7 +437,7 @@ class HomeState extends State<Home> {
 
   Future<void> playW() async {
     final file = new File('${(await getTemporaryDirectory()).path}/W.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetW()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -449,7 +449,7 @@ class HomeState extends State<Home> {
 
   Future<void> playX() async {
     final file = new File('${(await getTemporaryDirectory()).path}/X.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetX()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -461,7 +461,7 @@ class HomeState extends State<Home> {
 
   Future<void> playY() async {
     final file = new File('${(await getTemporaryDirectory()).path}/Y.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetY()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;
@@ -473,7 +473,7 @@ class HomeState extends State<Home> {
 
   Future<void> playZ() async {
     final file = new File('${(await getTemporaryDirectory()).path}/Z.mp3');
-    await file.writeAsBytes((await loadAssetB()).buffer.asUint8List());
+    await file.writeAsBytes((await loadAssetZ()).buffer.asUint8List());
     await audioPlayer.play(file.path, isLocal: true);
     setState(() {
       playerState = AudioPlayerState.PLAYING;

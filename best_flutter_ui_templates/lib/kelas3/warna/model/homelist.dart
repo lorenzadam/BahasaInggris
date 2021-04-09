@@ -1,4 +1,4 @@
-//import 'package:best_flutter_ui_templates/kelas3/huruf/home_screen.dart';
+import 'package:best_flutter_ui_templates/kelas3/warna/pelajari/main.dart';
 import 'package:flutter/widgets.dart';
 
 class HomeList {
@@ -17,7 +17,7 @@ class HomeList {
     ),
     HomeList(
       imagePath: 'assets/images/pelajari.png',
-      // navigateScreen: Kelas4HomeScreen(),
+      navigateScreen: MyApp(),
     ),
   ];
 }
