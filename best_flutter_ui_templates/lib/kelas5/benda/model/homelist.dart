@@ -1,4 +1,5 @@
 import 'package:best_flutter_ui_templates/kelas5/benda/pelajari/main.dart';
+import 'package:best_flutter_ui_templates/kelas5/benda/permainan/main.dart';
 import 'package:flutter/widgets.dart';
 
 class HomeList {
@@ -13,7 +14,7 @@ class HomeList {
   static List<HomeList> homeList = [
     HomeList(
       imagePath: 'assets/images/mulaibermain.png',
-      //navigateScreen: Huruf(),
+      navigateScreen: MyAppPermainan(),
     ),
     HomeList(
       imagePath: 'assets/images/pelajari.png',

@@ -2,6 +2,7 @@ import 'package:best_flutter_ui_templates/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'model/homelist.dart';
 
+// ignore: camel_case_types
 class kosaKata extends StatefulWidget {
   const kosaKata({Key key}) : super(key: key);
 
