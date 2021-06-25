@@ -5,9 +5,9 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'dart:io';
 import 'package:best_flutter_ui_templates/app_theme.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MyAppPelajari());
 
-class MyApp extends StatelessWidget {
+class MyAppPelajari extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
