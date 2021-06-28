@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
-  final Function selectHandler;
-  final String answerText;
-
-  Answer(this.selectHandler, this.answerText);
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      child: RaisedButton(
-        color: Color(0xFF00E676),
-        textColor: Colors.white,
-        child: Text(answerText),
-        onPressed: selectHandler,
-      ), //RaisedButton
-    ); //Container
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+          Container(
+              width: 300,
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Enter Name Here',
+                  hintText: 'Enter Name Here',
+                ),
+                autofocus: false,
+              ))
+        ]))));
   }
 }

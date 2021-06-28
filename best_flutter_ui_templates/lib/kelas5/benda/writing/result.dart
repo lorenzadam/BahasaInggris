@@ -36,17 +36,16 @@ class Result extends StatelessWidget {
             resultPhrase,
             style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
-          ), //Text
+          ),
           Text(
             'Skor ' '$resultScore',
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
-          ), //Text
-          ElevatedButton(
+          ),
+          TextButton(
             child: Text(
               'Ulangi Permainan!',
-            ), //Text
-            //textColor: Colors.blue,
+            ),
             onPressed: resetHandler,
           ),
         ],
