@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './question.dart';
-import './result.dart';
+//import './result.dart';
 
 void main() => runApp(MyAppWriting());
 

@@ -3,66 +3,87 @@ import 'package:flutter/material.dart';
 import './quiz.dart';
 import './result.dart';
 
-void main() => runApp(MyAppListening());
+void main() => runApp(MyAppReading());
 
-class MyAppListening extends StatefulWidget {
+class MyAppReading extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _MyAppListeningState();
+    return _MyAppQuizState();
   }
 }
 
-class _MyAppListeningState extends State<MyAppListening> {
+class _MyAppQuizState extends State<MyAppReading> {
   final _questions = const [
     {
-      'questionText': 'Q1. Who created Flutter?',
+      'questionText': 'Meja',
       'answers': [
-        {'text': 'Facebook', 'score': -2},
-        {'text': 'Adobe', 'score': -2},
-        {'text': 'Google', 'score': 10},
-        {'text': 'Microsoft', 'score': -2},
+        {'text': 'Tabel', 'score': -2},
+        {'text': 'Table', 'score': 10},
+        {'text': 'Taebel', 'score': -2},
+        {'text': 'Taeble', 'score': -2},
       ],
     },
     {
-      'questionText': 'Q2. What is Flutter?',
+      'questionText': 'Kursi',
       'answers': [
-        {'text': 'Android Development Kit', 'score': -2},
-        {'text': 'IOS Development Kit', 'score': -2},
-        {'text': 'Web Development Kit', 'score': -2},
-        {
-          'text':
-              'SDK to build beautiful IOS, Android, Web & Desktop Native Apps',
-          'score': 10
-        },
+        {'text': 'Cair', 'score': -2},
+        {'text': 'Ceir', 'score': -2},
+        {'text': 'Chair', 'score': 10},
+        {'text': 'Cheir', 'score': -2},
       ],
     },
     {
-      'questionText': ' Q3. Which programing language is used by Flutter',
+      'questionText': 'Lemari Pakaian',
       'answers': [
-        {'text': 'Ruby', 'score': -2},
-        {'text': 'Dart', 'score': 10},
-        {'text': 'C++', 'score': -2},
-        {'text': 'Kotlin', 'score': -2},
+        {'text': 'Wardrobe', 'score': 10},
+        {'text': 'Wadrop', 'score': -2},
+        {'text': 'Waerdrobe', 'score': -2},
+        {'text': 'Weardrobe', 'score': -2},
       ],
     },
     {
-      'questionText': 'Q4. Who created Dart programing language?',
+      'questionText': 'Buku',
       'answers': [
-        {'text': 'Lars Bak and Kasper Lund', 'score': 10},
-        {'text': 'Brendan Eich', 'score': -2},
-        {'text': 'Bjarne Stroustrup', 'score': -2},
-        {'text': 'Jeremy Ashkenas', 'score': -2},
+        {'text': 'Bok', 'score': -2},
+        {'text': 'Buk', 'score': -2},
+        {'text': 'Boek', 'score': -2},
+        {'text': 'Book', 'score': 10},
       ],
     },
     {
-      'questionText':
-          'Q5. Is Flutter for Web and Desktop available in stable version?',
+      'questionText': 'Kaca',
       'answers': [
-        {
-          'text': 'Yes',
-          'score': -2,
-        },
-        {'text': 'No', 'score': 10},
+        {'text': 'Glaes', 'score': -2},
+        {'text': 'Glass', 'score': 10},
+        {'text': 'Glaes', 'score': -2},
+        {'text': 'Gluss', 'score': -2},
+      ],
+    },
+    {
+      'questionText': 'Piring',
+      'answers': [
+        {'text': 'Plat', 'score': -2},
+        {'text': 'Plet', 'score': -2},
+        {'text': 'Plate', 'score': 10},
+        {'text': 'Pleat', 'score': -2},
+      ],
+    },
+    {
+      'questionText': 'Telfon Genggam',
+      'answers': [
+        {'text': 'Handphone', 'score': 10},
+        {'text': 'Haendphone', 'score': -2},
+        {'text': 'Hendphone', 'score': -2},
+        {'text': 'Heandphone', 'score': -2},
+      ],
+    },
+    {
+      'questionText': 'Pakaian',
+      'answers': [
+        {'text': 'Cloths', 'score': -2},
+        {'text': 'Clothes', 'score': 10},
+        {'text': 'Clotes', 'score': -2},
+        {'text': 'Clots', 'score': -2},
       ],
     },
   ];
@@ -85,9 +106,9 @@ class _MyAppListeningState extends State<MyAppListening> {
     });
     print(_questionIndex);
     if (_questionIndex < _questions.length) {
-      print('We have more questions!');
+      print('Masih ada pertanyaan lagi!');
     } else {
-      print('No more questions!');
+      print('Tidak ada pertanyaan lagi!');
     }
   }
 

@@ -42,15 +42,15 @@ class Result extends StatelessWidget {
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ), //Text
-          FlatButton(
+          ElevatedButton(
             child: Text(
               'Ulangi Permainan!',
             ), //Text
-            textColor: Colors.blue,
+            //textColor: Colors.blue,
             onPressed: resetHandler,
-          ), //FlatButton
-        ], //<Widget>[]
-      ), //Column
-    ); //Center
+          ),
+        ],
+      ),
+    );
   }
 }
