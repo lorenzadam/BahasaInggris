@@ -18,33 +18,33 @@ class _MyAppQuizState extends State<MyAppWriting> {
 
   final questions = const [
     {
-      'questionText': 'Meja',
-      'answers': 'Table',
+      'questionText': 'Memperbaiki',
+      'answers': 'Improve',
     },
     {
-      'questionText': 'Kursi',
-      'answers': 'Chair',
+      'questionText': 'Mengabaikan',
+      'answers': 'Ignore',
     },
     {
-      'questionText': 'Lemari Pakaian',
-      'answers': 'Wardrobe',
+      'questionText': 'Memperoleh',
+      'answers': 'Obtain',
     },
-    {'questionText': 'Buku', 'answers': 'Book'},
+    {'questionText': 'Mendengar', 'answers': 'Hear'},
     {
-      'questionText': 'Kaca',
-      'answers': 'Glass',
-    },
-    {
-      'questionText': 'Piring',
-      'answers': 'Plate',
+      'questionText': 'Ingat',
+      'answers': 'Remember',
     },
     {
-      'questionText': 'Telfon Genggam',
-      'answers': 'Handphone',
+      'questionText': 'Menyarankan',
+      'answers': 'Recommend',
     },
     {
-      'questionText': 'Pakaian',
-      'answers': 'Clothes',
+      'questionText': 'Paham',
+      'answers': 'Understand',
+    },
+    {
+      'questionText': 'Bicara',
+      'answers': 'Speak',
     },
   ];
 

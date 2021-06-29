@@ -39,6 +39,17 @@ class HomeState extends State<Home> {
     'Handphone',
     'Clothes'
   ];
+
+  final List<String> indonesia = [
+    'Meja',
+    'Kursi',
+    'Lemari Pakaian',
+    'Buku',
+    'Kaca',
+    'Piring',
+    'Telfon Genggam',
+    'Baju'
+  ];
   AudioPlayer audioPlayer;
   AudioPlayerState playerState;
 
