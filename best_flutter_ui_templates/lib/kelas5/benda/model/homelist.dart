@@ -1,6 +1,7 @@
 import 'package:best_flutter_ui_templates/kelas5/benda/pelajari/main.dart';
 import 'package:best_flutter_ui_templates/kelas5/benda/reading/main.dart';
 import 'package:best_flutter_ui_templates/kelas5/benda/writing/main.dart';
+import 'package:best_flutter_ui_templates/kelas5/benda/listening/main.dart';
 import 'package:flutter/widgets.dart';
 
 class HomeList {
@@ -19,7 +20,7 @@ class HomeList {
     ),
     HomeList(
       imagePath: 'assets/images/mendengar.png',
-      //navigateScreen: MyAppListening(),
+      navigateScreen: MyAppListening(),
     ),
     HomeList(
       imagePath: 'assets/images/membaca.png',

@@ -1,133 +1,150 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'dart:io';
 
-import './quiz.dart';
-import './result.dart';
+void main() => runApp(MyAppListening());
 
-void main() => runApp(MyAppReading());
-
-class MyAppReading extends StatefulWidget {
+class MyAppListening extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _MyAppQuizState();
   }
 }
 
-class _MyAppQuizState extends State<MyAppReading> {
-  final _questions = const [
-    {
-      'questionText': 'Meja',
-      'answers': [
-        {'text': 'Tabel', 'score': -2},
-        {'text': 'Table', 'score': 10},
-        {'text': 'Taebel', 'score': -2},
-        {'text': 'Taeble', 'score': -2},
-      ],
-    },
-    {
-      'questionText': 'Kursi',
-      'answers': [
-        {'text': 'Cair', 'score': -2},
-        {'text': 'Ceir', 'score': -2},
-        {'text': 'Chair', 'score': 10},
-        {'text': 'Cheir', 'score': -2},
-      ],
-    },
-    {
-      'questionText': 'Lemari Pakaian',
-      'answers': [
-        {'text': 'Wardrobe', 'score': 10},
-        {'text': 'Wadrop', 'score': -2},
-        {'text': 'Waerdrobe', 'score': -2},
-        {'text': 'Weardrobe', 'score': -2},
-      ],
-    },
-    {
-      'questionText': 'Buku',
-      'answers': [
-        {'text': 'Bok', 'score': -2},
-        {'text': 'Buk', 'score': -2},
-        {'text': 'Boek', 'score': -2},
-        {'text': 'Book', 'score': 10},
-      ],
-    },
-    {
-      'questionText': 'Kaca',
-      'answers': [
-        {'text': 'Glaes', 'score': -2},
-        {'text': 'Glass', 'score': 10},
-        {'text': 'Glaes', 'score': -2},
-        {'text': 'Gluss', 'score': -2},
-      ],
-    },
-    {
-      'questionText': 'Piring',
-      'answers': [
-        {'text': 'Plat', 'score': -2},
-        {'text': 'Plet', 'score': -2},
-        {'text': 'Plate', 'score': 10},
-        {'text': 'Pleat', 'score': -2},
-      ],
-    },
-    {
-      'questionText': 'Telfon Genggam',
-      'answers': [
-        {'text': 'Handphone', 'score': 10},
-        {'text': 'Haendphone', 'score': -2},
-        {'text': 'Hendphone', 'score': -2},
-        {'text': 'Heandphone', 'score': -2},
-      ],
-    },
-    {
-      'questionText': 'Pakaian',
-      'answers': [
-        {'text': 'Cloths', 'score': -2},
-        {'text': 'Clothes', 'score': 10},
-        {'text': 'Clotes', 'score': -2},
-        {'text': 'Clots', 'score': -2},
-      ],
-    },
+class _MyAppQuizState extends State<MyAppListening> {
+  String name = '';
+  String text = '';
+  int questionIndex = 0;
+
+  final List<String> questions = [
+    'Table',
+    'Chair',
+    'Wardrobe',
+    'Book',
+    'Glass',
+    'Plate',
+    'Handphone',
+    'Clothes'
   ];
 
-  var _questionIndex = 0;
-  var _totalScore = 0;
+  AudioPlayer audioPlayer;
+  AudioPlayerState playerState;
 
-  void _resetQuiz() {
+  @override
+  void initState() {
+    super.initState();
+    audioPlayer = AudioPlayer();
+    playerState = null;
+  }
+
+  Future loadAsset(value) async {
+    return await rootBundle.load('assets/audio/' + value + '.mp3');
+  }
+
+  Future<void> play() async {
+    final file = new File('${(await getTemporaryDirectory()).path}/' +
+        this.questions[questionIndex] +
+        '.mp3');
+    await file.writeAsBytes(
+        (await loadAsset(this.questions[questionIndex])).buffer.asUint8List());
+    await audioPlayer.play(file.path, isLocal: true);
     setState(() {
-      _questionIndex = 0;
-      _totalScore = 0;
+      playerState = AudioPlayerState.PLAYING;
+      if (audioPlayer.state == AudioPlayerState.COMPLETED) {
+        playerState = AudioPlayerState.STOPPED;
+      }
     });
   }
 
-  void _answerQuestion(int score) {
-    _totalScore += score;
+  Future<void> pause() async {
+    await audioPlayer.pause();
+    setState(() => playerState = AudioPlayerState.PAUSED);
+  }
 
+  Future<void> stop() async {
+    await audioPlayer.stop();
+    setState(() => playerState = AudioPlayerState.STOPPED);
+  }
+
+  void onPressed() {
     setState(() {
-      _questionIndex = _questionIndex + 1;
+      if (this.name.trim().length == 0) return;
+
+      if (this.name == questions[questionIndex]) {
+        this.text = 'Benar';
+        if (questionIndex < (questions.length - 1)) {
+          questionIndex = questionIndex + 1;
+        } else {
+          questionIndex = 0;
+        }
+      } else {
+        this.text = 'Salah';
+      }
     });
-    print(_questionIndex);
-    if (_questionIndex < _questions.length) {
-      print('Masih ada pertanyaan lagi!');
-    } else {
-      print('Tidak ada pertanyaan lagi!');
-    }
+  }
+
+  void onChanged(String value) {
+    setState(() {
+      this.name = value;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: _questionIndex < _questions.length
-              ? Quiz(
-                  answerQuestion: _answerQuestion,
-                  questionIndex: _questionIndex,
-                  questions: _questions,
-                ) //Quiz
-              : Result(_totalScore, _resetQuiz),
-        ), //Padding
-      ), //Scaffold
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              ElevatedButton(
+                child: Icon(Icons.play_arrow),
+                onPressed: playerState == null ||
+                        playerState == AudioPlayerState.PAUSED ||
+                        playerState == AudioPlayerState.STOPPED ||
+                        playerState == AudioPlayerState.COMPLETED
+                    ? play
+                    : null,
+              ),
+              ElevatedButton(
+                child: Icon(Icons.stop),
+                onPressed:
+                    playerState == AudioPlayerState.PLAYING ? stop : null,
+              ),
+              Container(
+                width: 300,
+                child: TextField(
+                  onChanged: (String value) {
+                    onChanged(value);
+                  },
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Jawaban',
+                    hintText: 'Ketik Dalam Bahasa Inggris',
+                  ),
+                  autofocus: false,
+                ),
+              ),
+              ElevatedButton(
+                child: Text('Jawab'),
+                onPressed: () {
+                  onPressed();
+                },
+              ),
+              Container(
+                height: 15.0,
+              ),
+              Text(
+                this.text,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+        ),
+      ),
       debugShowCheckedModeBanner: false,
-    ); //MaterialApp
+    );
   }
 }
