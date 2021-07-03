@@ -72,7 +72,8 @@ class _MyAppQuizState extends State<MyAppListening> {
     setState(() {
       if (this.name.trim().length == 0) return;
 
-      if (this.name == questions[questionIndex]) {
+      if (this.name == questions[questionIndex] ||
+          this.name == questions[questionIndex].toLowerCase()) {
         this.text = 'Benar';
         if (questionIndex < (questions.length - 1)) {
           questionIndex = questionIndex + 1;
